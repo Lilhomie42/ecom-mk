@@ -1,3 +1,4 @@
+import 'package:ecom_mk/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
@@ -10,6 +11,7 @@ class IntroPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Logo
             Padding(
@@ -51,19 +53,27 @@ class IntroPage extends StatelessWidget {
 
             const SizedBox(height: 48),
             //Start now button
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.grey[900],
-                  borderRadius: BorderRadius.circular(12)),
-              child: Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Center(
-                  child: Text(
-                    "Shop Now",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+            GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Colors.grey[900],
+                    borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.all(25.0),
+                  child: Center(
+                    child: Text(
+                      "Shop Now",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
