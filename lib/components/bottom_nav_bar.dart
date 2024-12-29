@@ -11,7 +11,7 @@ class MyBottomNavBar extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 25),
         child: GNav(
-          color: Colors.grey[400],
+          color: Colors.black54,
           activeColor: Colors.grey.shade700,
           tabActiveBorder: Border.all(color: Colors.white),
           tabBackgroundColor: Colors.grey.shade100,
